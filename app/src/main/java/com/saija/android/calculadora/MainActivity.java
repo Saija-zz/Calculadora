@@ -9,10 +9,14 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
     private EditText pantalla;
 
+    private long operandoA;
+    private long operandoB;
+    private char operador;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.calc_grid_layout);
+        setContentView(R.layout.calculator_table);
 
         pantalla = (EditText)findViewById(R.id.screen);
     }
@@ -31,6 +35,19 @@ public class MainActivity extends AppCompatActivity {
             pantalla.setText(strBuilder.toString());
 
         }catch(NumberFormatException nfe){
+            pantalla.setText(nfe.getMessage());
+        }
+
+    }
+
+    public void onClickOperator(View view) {
+        Button leBoton = (Button)view;
+
+        String txtBoton = leBoton.getText().toString();
+
+        try{
+
+        }catch(Exception nfe){
             pantalla.setText(nfe.getMessage());
         }
 
