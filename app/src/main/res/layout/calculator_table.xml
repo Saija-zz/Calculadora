@@ -16,13 +16,15 @@
 
     </TableRow>
 
+    <!--
     <TableRow android:layout_weight="1">
 
         <Button
             android:id="@+id/button11"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/pi" />
+            android:text="@string/pi"
+            android:onClick="onClickPi"/>
 
         <Button
             android:id="@+id/button12"
@@ -177,5 +179,6 @@
             android:text="@string/equal"
             android:onClick="onClickOperator"/>
     </TableRow>
+    -->
 
 </TableLayout>

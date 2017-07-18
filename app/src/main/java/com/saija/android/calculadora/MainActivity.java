@@ -9,19 +9,25 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
     private EditText pantalla;
 
-    private long operandoA;
-    private long operandoB;
+    private long operandoA = 0;
+    private long operandoB = 0;
     private char operador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.calculator_table);
+        setContentView(R.layout.basico);
 
-        pantalla = (EditText)findViewById(R.id.screen);
+        /*
+        try {
+            pantalla = (EditText) findViewById(R.id.screen);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        */
     }
 
-    public void onClickNumbers(View view) {
+    /*public void onClickNumbers(View view) {
 
         Button leBoton = (Button)view;
 
@@ -38,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
             pantalla.setText(nfe.getMessage());
         }
 
+    }*/
+
+    public void onClickPi(View view) {
+        pantalla.setText(String.valueOf(Math.PI));
     }
 
     public void onClickOperator(View view) {
